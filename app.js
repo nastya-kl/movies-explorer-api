@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const { errors } = require('celebrate');
 
-// const router = require('./routes/index');
+const router = require('./routes/index');
 const { limiter } = require('./utils/config');
 const { PORT, DB_URL } = require('./utils/config');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
@@ -24,7 +24,7 @@ mongoose.connect(DB_URL, {
 
 app.use(requestLogger);
 
-// app.use(router);
+app.use(router);
 
 app.use(errorLogger);
 app.use(errors());
