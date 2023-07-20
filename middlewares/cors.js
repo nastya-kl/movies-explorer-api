@@ -1,8 +1,8 @@
 const allowedCors = [
   'http://localhost:3001',
   'https://localhost:3001',
-  // 'http://mesto.nastya-kll.nomoreparties.sbs',
-  // 'https://mesto.nastya-kll.nomoreparties.sbs',
+  'http://movies.nastya-kl.nomoredomains.xyz',
+  'https://movies.nastya-kl.nomoredomains.xyz',
 ];
 
 const cors = (req, res, next) => {
