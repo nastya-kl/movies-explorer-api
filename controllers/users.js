@@ -63,6 +63,8 @@ const updateProfile = (req, res, next) => {
     .catch((err) => {
       if (err instanceof ValidationError) {
         next(new BadRequest('Переданы некорректные данные при обновлении профиля'));
+      } else if (err.code === ERR_CODE_UNIQ) {
+        next(new Conflict('Пользователь с таким Email уже зарегистрирован'));
       } else {
         next(err);
       }
