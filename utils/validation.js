@@ -33,17 +33,9 @@ const userProfileInfoValidation = celebrate({
 // createMovie
 const newMovieValidation = celebrate({
   body: Joi.object().keys({
-    name: Joi.string().min(2).max(30).required(),
-    link: Joi.string().required().pattern(regex),
-  }),
-});
-
-// getMovieId
-const movieIdValidation = celebrate({
-  params: Joi.object().keys({
     country: Joi.string().required(),
     director: Joi.string().required(),
-    duration: Joi.string().required(),
+    duration: Joi.number().required(),
     year: Joi.string().required(),
     description: Joi.string().required(),
     image: Joi.string().required().pattern(regex),
@@ -52,6 +44,13 @@ const movieIdValidation = celebrate({
     movieId: Joi.number().required(),
     nameRU: Joi.string().required(),
     nameEN: Joi.string().required(),
+  }),
+});
+
+// getMovieId
+const movieIdValidation = celebrate({
+  params: Joi.object().keys({
+    movieId: Joi.string().min(24).hex().required(),
   }),
 });
 
