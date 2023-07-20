@@ -5,7 +5,7 @@ const {
   updateProfile,
 } = require('../controllers/users');
 
-router.get('/users/me', getLoggedUser);
-router.patch('/users/me', updateProfile);
+router.get('/me', getLoggedUser);
+router.patch('/me', updateProfile);
 
 module.exports = router;
