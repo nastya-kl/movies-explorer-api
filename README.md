@@ -6,7 +6,7 @@
 
 ---
 
-**Ссылка на репозиторий:** https://github.com/nastya-kl/movies-explorer-api
-**Адрес сервера:** https://api.movies.nastya-kl.nomoredomains.xyz
+**Ссылка на репозиторий:** https://github.com/nastya-kl/movies-explorer-api<br/>
+**Адрес сервера:** https://api.movies.nastya-kl.nomoredomains.xyz<br/>
 **IP:** ``158.160.98.15``
 
